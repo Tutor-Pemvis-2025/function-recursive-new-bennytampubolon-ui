@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TFUNC"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-11 09:08:26 PM"/>
+        <attribute name="created" value="VXNlcjtCRU5OWS1BLU1BRVMtVEE7MjAyNS0xMS0xMTswOTowNjowOCBQTTsyNzE4"/>
+        <attribute name="edited" value="VXNlcjtCRU5OWS1BLU1BRVMtVEE7MjAyNS0xMS0xMTswOTowNzoxOCBQTTsyO1VTRVI7TEFQVE9QLVVGVUFBM0lKOzIwMjQtMTEtMDU7MDk6MTM6NDIgUE07VEZVTkNbMV0uZnByZzs2NzE1"/>
+        <attribute name="edited" value="VXNlcjtCRU5OWS1BLU1BRVMtVEE7MjAyNS0xMS0xMTswOTowODoyNiBQTTsxOzI4Mjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, hasil" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="hasil" expression="pertambahan(n)"/>
+            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; n" newline="True"/>
+            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; hasil" newline="True"/>
+        </body>
+    </function>
+    <function name="pertambahan" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="hasil" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="pertambahan(n-1)+n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
